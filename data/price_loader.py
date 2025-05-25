@@ -23,8 +23,8 @@ to_timestamp = str(1698796800) # 2023年11月1日WednesdayAM12点00分
 with open("coin_prices.json", "r") as f:
     latest_prices = json.load(f)
 
-api_key ="CG-Y4LiQWD1ucA6PozWdXvyuGdc"
-#new_path = https://pro-api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=bitcoin&x_cg_pro_api_key=YOUR_API_KEY
+api_key ="..."
+
 prices = latest_prices
 index = 0
 for address in coin_list.keys():

@@ -210,34 +210,7 @@ def preprocess_by_month(month):
     
     print("loaded block_data")
     
-    """
-    # load transaction data
-    transaction_filenames =  get_files_list_by_month("transaction",month)
-    print("start transactions data")
-
-    
-    file_num = 0
-    for transaction_filename in transaction_filenames:
-        file_num += 1
-        start_time = time.time()
-        df = load_parquet_to_pandas(transaction_filename)
-        transactions_list = df.to_dict('records')
-        #end_time = time.time()
-        
-        #for index, row in df.iterrows():
-        for row in transactions_list:
-            row["value"] = int(row["value"])
-            #print(row['block_timestamp'])
-            row['block_timestamp'] = str(row['block_timestamp'])
-            #block_dict[row['block_number']]["transactions"].append(row)
-            block_dict[row['block_number']]["transactions"].append(row)
-        del df
-        end_time = time.time()
-        print(f"finish {file_num}/{len(transaction_filenames)}, use time {end_time -start_time}")
-        #save_json("test.json",block_dict[15660557])
-        #assert(0==1)
-    """
-    
+   
     # load token_transfer data
     token_transfers_filenames =  get_files_list_by_month("token_transfer",month)
     print("start token_transfer data")
@@ -289,9 +262,6 @@ def preprocess_by_month(month):
         
 
 def main():
-    #pd.set_option("display.precision", 16)
-    #preprocess_by_month("2022_10")
-    #preprocess_by_day("2022-10-01")
     
     month = str(sys.argv[1])
     
@@ -304,22 +274,5 @@ def main():
         except:
             print(f"error in {date}")
     
-
-    """
-    start_time = time.time()
-    df = load_parquet_to_pandas("/mnt/data1/zhangzihao/transactions/transactions_2023_01_000000000236.parquet.gzip")
-    
-    time1 = time.time()
-    data_dict = df.to_dict('records')
-
-    time2 = time.time()
-    save_pickle("test.pkl",data_dict)
-    #print(data_dict)
-    end_time = time.time()
-
-    print(time1-start_time)
-    print(time2 - time1)
-    print(end_time - time2)
-    """
 if __name__ == "__main__":
     main()

@@ -15,21 +15,7 @@ def get_filepaths(data_type):
     filepaths = glob.glob(data_dir + "/" + pattern)
     filepaths.sort()
     return filepaths
-    #/data4/zengliyi/pbs_dataset
-    # Set the directory path and the regular expression pattern
-"""
-    if data_type == 'block':
-        pattern = f"{data_type}s_*.csv"
-        filepaths = glob.glob(data_dir+ "/" + pattern)
-        filepaths.sort()
-    elif data_type == "token_transfer":
-        pattern = f"{data_type}_info_000*.parquet.gzip"  # Change this to match the desired pattern
 
-        # Get a list of all file names in the directory that match the pattern
-        filepaths = glob.glob(data_dir+ "/" + pattern)
-        filepaths.sort()
-    else:
-"""
 
 
 def split_data_batch(file_paths,data_type):
@@ -59,10 +45,7 @@ def main():
     pool = multiprocessing.Pool(processes=n_workers)
     
     
-    for data_type in ["token_transfer"]:
-            #first ["blocks","logs","token","transactions","traces"]:
-            #origin ["blocks","logs"," token_transfer","transactions","traces"]:
-    
+    for data_type in ["blocks","logs"," token_transfer","transactions","traces"]:
         file_paths = get_filepaths(data_type)
         print(file_paths)
         print("file num", len(file_paths))

@@ -674,43 +674,7 @@ def analysis_logs(transaction,cache,tokens_cache,w3):
             #except:
             #    print("unrcognize AAVE_V2!")
             #    pass
-        """
-        if COMPOUND_V2 in log_topics:
-            try:
-                liquidator             = Web3.toChecksumAddress("0x"+log_data[24:64]) # liquidator
-                liquidated_user        = Web3.toChecksumAddress("0x"+log_data[88:128]) # borrower
-                debt_token_amount      = int(log_data, 16) # repayAmount
-                received_token_address = Web3.toChecksumAddress("0x"+log_data[216:256]) # cTokenCollateral
-                received_token_amount  = int(log_data[256:320], 16)
-                
-                received_token_name = get_token_name(received_token_address,tokens_cache)
-                received_token_decimals = get_token_decimal(received_token_address,tokens_cache)
-
-                event ={
-                    "action": "LIQUIDATION",
-                    "name" : "COMPOUND_V2_LIQUIDATION"
-                    "liquidator": liquidator,
-                    "liquidated_user": liquidated_user,
-                    "debt_token_address": "",
-                    "debt_token_amount": debt_token_amount,
-                    "debt_token_name": "",
-                    "debt_token_decimals": 0,
-                    "debt_token_to_eth_price": None,
-                    "received_token_address": received_token_address,
-                    "received_token_amount": received_token_amount,
-                    "received_token_name": received_token_name,
-                    "received_token_decimals": received_token_decimals,
-                    "received_token_to_eth_price": None,
-                    "protocol_address": log_address,
-                    "protocol_name": "Compound V2"
-                }
-
-                actions_list.append(event)
-                liquidations_list.append(event)
-            
-            except:
-                pass
-        """
+        
 
     return actions_list,swaps_list,liquidations_list,flash_loans_list
         
