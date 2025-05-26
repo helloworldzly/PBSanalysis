@@ -19,18 +19,18 @@ We have developed a comprehensive toolkit for analyzing PBS (Proposer-Builder Se
    - Block Proposer Revenue Analysis
    - Transaction Fee Analysis
 2. MEV Analysis
-   - Detection and analysis of Arbitrage, Liquidation, and Sandwich attacks
+   - Detection and analysis of Arbitrage, Liquidation, and Sandwich attacks (the detection logic comes from [1][2])
    - MEV revenue flow analysis and tracking
 
 # Usage
 
 ## Download Raw Data
 1. Block Info, Transactions, Logs & Token Transfers
-    - These Ethereum on-chain data sets should be downloaded from Google Cloud in parquet.gzip format. For detailed instructions, please refer to https://cloud.google.com/blog/products/data-analytics/ethereum-bigquery-public-dataset-smart-contract-analytics
+    - These Ethereum on-chain data sets should be downloaded from Google Cloud in parquet.gzip format. For detailed instructions, please refer to [Google Bigquery](https://cloud.google.com/blog/products/data-analytics/ethereum-bigquery-public-dataset-smart-contract-analytics).
 2. Relay Data (Only use for analyis relay behavior)
-    - Block submission records from relays can be downloaded from https://mevboost.pics/data.html
+    - Block submission records from relays can be downloaded from [Mevboost.pics](https://mevboost.pics/data.html).
 3. Smart Contract Information
-    - This requires access to specific chain RPC endpoints. We use QuickNode RPC to obtain contract information and token data
+    - This requires access to specific chain RPC endpoints. We use [QuickNode RPC](https://www.quicknode.com/docs/ethereum) to obtain contract information and token data
 4. CoinGecko
     - Used for retrieving daily token prices (can be replaced with alternative coin price APIs)
 
@@ -72,6 +72,10 @@ Our analysis focuses on two main aspects: PBS analysis examining block proposer 
     ```
 4. Results
     - All MEV and PBS information from blocks is stored in daily-segmented data files for subsequent analysis
+
+## Reference
+[1] Qin, Kaihua, Liyi Zhou, and Arthur Gervais. "Quantifying blockchain extractable value: How dark is the forest?." 2022 IEEE Symposium on Security and Privacy (SP). IEEE, 2022.
+[2] Weintraub, Ben, et al. "A flash (bot) in the pan: measuring maximal extractable value in private pools." Proceedings of the 22nd ACM Internet Measurement Conference. 2022.
 
 # Contact
 We welcome discussions and collaborations from researchers and practitioners interested in the PBS mechanism. Feel free to reach out to our team at: zengly@pcl.ac.cn, zhangzihao2016@gmail.com.
