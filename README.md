@@ -19,7 +19,7 @@ We have developed a comprehensive toolkit for analyzing PBS (Proposer-Builder Se
    - Block Proposer Revenue Analysis
    - Transaction Fee Analysis
 2. MEV Analysis
-   - Detection and analysis of Arbitrage, Liquidation, and Sandwich attacks (the detection logic comes from [1][2])
+   - Detection and analysis of Arbitrage, Liquidation, and Sandwich attacks (the detection logic comes from [^weintraub2022] and )
    - MEV revenue flow analysis and tracking
 
 # Usage
@@ -75,7 +75,7 @@ Our analysis focuses on two main aspects: PBS analysis examining block proposer 
 
 ## Reference
 [1] Qin, Kaihua, Liyi Zhou, and Arthur Gervais. "Quantifying blockchain extractable value: How dark is the forest?." 2022 IEEE Symposium on Security and Privacy (SP). IEEE, 2022.
-[2] Weintraub, Ben, et al. "A flash (bot) in the pan: measuring maximal extractable value in private pools." Proceedings of the 22nd ACM Internet Measurement Conference. 2022.
+[^weintraub2022]: Weintraub, Ben, et al. "A flash (bot) in the pan: measuring maximal extractable value in private pools." Proceedings of the 22nd ACM Internet Measurement Conference. 2022.
 
 # Contact
 We welcome discussions and collaborations from researchers and practitioners interested in the PBS mechanism. Feel free to reach out to our team at: zengly@pcl.ac.cn, zhangzihao2016@gmail.com.
