@@ -19,7 +19,7 @@ We have developed a comprehensive toolkit for analyzing PBS (Proposer-Builder Se
    - Block Proposer Revenue Analysis
    - Transaction Fee Analysis
 2. MEV Analysis
-   - Detection and analysis of Arbitrage, Liquidation, and Sandwich attacks (the detection logic comes from [^weintraub2022] and )
+   - Detection and analysis of Arbitrage, Liquidation, and Sandwich attacks (detection logic comes from [^qin2022][^weintraub2022])
    - MEV revenue flow analysis and tracking
 
 # Usage
@@ -51,7 +51,7 @@ The data processing module provides a comprehensive pipeline for downloading, pr
     ```
 
 ## PBS & MEV Analysis
-Our analysis focuses on two main aspects: PBS analysis examining block proposer and builder behavior, and MEV analysis investigating MEV distribution and revenue allocation. Our implementation references https://github.com/a-flashbot-in-the-pan/a-flashbot-in-the-pan
+Our analysis focuses on two main aspects: PBS analysis examining block proposer and builder behavior, and MEV analysis investigating MEV distribution and revenue allocation.
 
 1. PBS Analysis
     - Analyzes block builder and proposer behavior, calculates revenue distribution, and examines transaction fee allocation
@@ -74,7 +74,7 @@ Our analysis focuses on two main aspects: PBS analysis examining block proposer 
     - All MEV and PBS information from blocks is stored in daily-segmented data files for subsequent analysis
 
 ## Reference
-[1] Qin, Kaihua, Liyi Zhou, and Arthur Gervais. "Quantifying blockchain extractable value: How dark is the forest?." 2022 IEEE Symposium on Security and Privacy (SP). IEEE, 2022.
+[^qin2022]: Qin, Kaihua, Liyi Zhou, and Arthur Gervais. "Quantifying blockchain extractable value: How dark is the forest?." 2022 IEEE Symposium on Security and Privacy (SP). IEEE, 2022.
 [^weintraub2022]: Weintraub, Ben, et al. "A flash (bot) in the pan: measuring maximal extractable value in private pools." Proceedings of the 22nd ACM Internet Measurement Conference. 2022.
 
 # Contact
