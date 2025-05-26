@@ -54,19 +54,19 @@ The data processing module provides a comprehensive pipeline for downloading, pr
 Our analysis focuses on two main aspects: PBS analysis examining block proposer and builder behavior, and MEV analysis investigating MEV distribution and revenue allocation.
 
 1. PBS Analysis
-    - Analyzes block builder and proposer behavior, calculates revenue distribution, and examines transaction fee allocation
+    - Analyze block builder and proposer behavior, calculate revenue distribution, and examine transaction fee allocation
     ```bash
     python mev_analysis.py
     ```
 2. Log Analysis
-    - Parses event logs from various DeFi protocols, supporting major DEXes including Uniswap, Curve, Balancer, etc.
-    - Requires QuickNode RPC for contract information and daily token prices
+    - Parse event logs from various DeFi protocols, supporting major DEXes including Uniswap, Curve, Balancer, etc.
+    - Require QuickNode RPC for contract information and daily token prices
     ```bash
     python log_mev_analysis_multiprocessing.py
     ```
 3. MEV Analysis
-    - Based on DeFi events parsed in step 2, analyzes MEV revenue distribution
-    - Detects and analyzes arbitrage trades, liquidations, and sandwich attacks
+    - Based on DeFi events parsed in Step 2, analyze MEV revenue distribution
+    - Detect and analyze Arbitrage trades, Liquidations, and Sandwich attacks
     ```bash
     python mev_analysis_multiprocess.py
     ```
