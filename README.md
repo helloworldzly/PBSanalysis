@@ -73,7 +73,6 @@ Our analysis focuses on two main aspects: PBS analysis examining block proposer 
 4. Results
     - All MEV and PBS information from blocks is stored in daily-segmented data files for subsequent analysis
 
-## Reference
 [^qin2022]: Qin, Kaihua, Liyi Zhou, and Arthur Gervais. "Quantifying blockchain extractable value: How dark is the forest?." 2022 IEEE Symposium on Security and Privacy (SP). IEEE, 2022.
 [^weintraub2022]: Weintraub, Ben, et al. "A flash (bot) in the pan: measuring maximal extractable value in private pools." Proceedings of the 22nd ACM Internet Measurement Conference. 2022.
 
