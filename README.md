@@ -2,6 +2,8 @@
 
 This repository hosts the code for **An Empirical Study of Proposer-Builder Separation (PBS) Effects on Ethereum Ecosystem**. Our research conducts a comprehensive, data-driven analysis of Ethereum’s PBS implementation—a groundbreaking architectural shift reshaping block production dynamics.
 
+【Paper Cite: Zeng, Liyi, Zihao Zhang, Wei Xu, and Zhaoquan Gu. 2025. "An Empirical Study of Proposer–Builder Separation (PBS) Effects on the Ethereum Ecosystem" Big Data and Cognitive Computing 9, no. 6: 156. https://doi.org/10.3390/bdcc9060156】
+
 The full methodological details and analysis results are documented in our accompanying paper (currently under peer review). Upon acceptance, we will synchronize the final version here. Researchers are encouraged to cite the official publication once available.
 
 # Introduction
